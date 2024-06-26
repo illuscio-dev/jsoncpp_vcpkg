@@ -46,7 +46,7 @@ namespace Json {
 #if __GNUC__ >= 6
 typedef std::scoped_ptr<CharReader> const  CharReaderPtr;
 #else
-typedef std::auto_ptr<CharReader>          CharReaderPtr;
+typedef std::unique_ptr<CharReader>          CharReaderPtr;
 #endif
 
 // Implementation of class Features
